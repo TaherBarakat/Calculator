@@ -9,10 +9,12 @@ main {
    justify-content: center;
 }
 .calculator {
+   font-family: sans-serif;
    box-shadow: 0px 0px 10px gray;
    border-radius: 20px;
    margin: 2rem;
    padding-top: 2rem;
+   padding-bottom: 1rem;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -20,17 +22,25 @@ main {
    background-color: rgba(145, 200, 255, 0.13);
 }
 .output {
-   border: 1px solid black;
+   border-radius: 5px;
+   box-shadow: 0px 0px 5px 1px gray;
+   overflow: hidden;
+   /* border: 1px solid black; */
    height: 6rem;
    width: 20rem;
 }
 #last-value {
+   padding: 0.5rem 1rem;
+   background-color: whitesmoke;
+   text-align: justify;
    height: 2.5rem;
-   background-color: rgb(255, 255, 255);
 }
 #user-input {
+   padding: 0.5rem 1rem;
+   text-align: right;
+
+   background-color: whitesmoke;
    height: 3.5rem;
-   background-color: cadetblue;
    font-size: 2.5rem;
 }
 
@@ -38,15 +48,15 @@ main {
 
 button {
    border: 0;
-
    box-shadow: 0px 0px 5px gray;
    border-radius: 4px;
-   margin: 0.7rem;
+   margin: 0.5rem;
    font-size: larger;
    font-weight: 400;
    background-color: rgb(255, 255, 255);
 }
 .control-btns {
+   padding-top: 0.5rem;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -61,15 +71,26 @@ button {
    align-items: center;
    justify-content: center;
    flex-wrap: wrap;
-   width: 26rem;
-   height: 26rem;
+   width: 22rem;
+   height: 22rem;
 }
 
 .buttons button {
    width: 4rem;
    height: 4rem;
+   font-size: 1.6rem;
+   font-weight: 500;
 }
 button:active {
    box-shadow: 0px 0px 0px gray;
    background-color: hsl(0, 0%, 69%);
+}
+footer a {
+   display: inline-block;
+   text-decoration: none;
+   color: black;
+}
+footer {
+   text-align: center;
+   padding-bottom: 2rem;
 }
