@@ -16,7 +16,6 @@ function operator(operation, a, b) {
 
 let operationKey = document.querySelectorAll(".operation");
 let keyValue = document.querySelectorAll(".value");
-
 let lastValue = document.querySelector("#last-value");
 let userInput = document.querySelector("#user-input");
 
@@ -28,8 +27,6 @@ keyValue.forEach((element) => {
    element.addEventListener("click", () => {
       input += element.innerText;
       userInput.innerText = input;
-
-      // console.log("inputis   ", input);
    });
 });
 
@@ -49,12 +46,23 @@ function choseOperation() {
    console.log("inputis   ", input);
 
    input = "";
-   userInput.innerText = "";
-
-   console.log("currentResultis   ", currentResult);
-   // console.log("operationis   ", operation);
+   userInput.innerText = "0";
 }
 
 operationKey.forEach((element) => {
    element.addEventListener("click", choseOperation);
+});
+
+// clear and delete functions
+
+document.querySelector("#clear").addEventListener("click", () => {
+   currentResult = "";
+   input = "";
+   operation = undefined;
+   userInput.innerText = "0";
+   lastValue.innerText = "";
+});
+document.querySelector("#delete").addEventListener("click", () => {
+   userInput.innerText = userInput.innerText.slice(0, -1);
+   input = userInput.innerText;
 });
