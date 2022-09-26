@@ -31,6 +31,7 @@ keyValue.forEach((element) => {
 });
 
 function choseOperation() {
+   console.log(input, " **", currentResult);
    currentResult =
       currentResult === ""
          ? input
@@ -43,10 +44,9 @@ function choseOperation() {
 
    lastValue.innerText = currentResult + this.innerText;
 
-   console.log("inputis   ", input);
-
    input = "";
    userInput.innerText = "0";
+   console.log(input, " **", currentResult);
 }
 
 operationKey.forEach((element) => {
@@ -62,7 +62,23 @@ document.querySelector("#clear").addEventListener("click", () => {
    userInput.innerText = "0";
    lastValue.innerText = "";
 });
+
 document.querySelector("#delete").addEventListener("click", () => {
    userInput.innerText = userInput.innerText.slice(0, -1);
    input = userInput.innerText;
+});
+
+// equalBtn ***************
+
+document.querySelector("#equal").addEventListener("click", () => {
+   currentResult =
+      currentResult === ""
+         ? input
+         : operator(operation, Number(currentResult), Number(input));
+
+   userInput.innerText = currentResult;
+   input = currentResult;
+   operation = undefined;
+   currentResult = "";
+   console.log(input, " **", currentResult);
 });
