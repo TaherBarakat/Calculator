@@ -54,6 +54,8 @@ button {
    font-size: larger;
    font-weight: 400;
    background-color: rgb(255, 255, 255);
+   transition: 150ms;
+   cursor: pointer;
 }
 .control-btns {
    padding-top: 0.5rem;
@@ -89,6 +91,11 @@ footer a {
    display: inline-block;
    text-decoration: none;
    color: black;
+   transition: 150ms;
+}
+a:hover {
+   font-size: 1.15rem;
+   font-weight: 1100;
 }
 footer {
    text-align: center;
